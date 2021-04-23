@@ -1,7 +1,7 @@
 #leitura dos dados
 library(readr)
 #lendo banco de dados de entregas
-entregas_tab <- read_delim("Desafio/entregas_tab.txt", 
+entregas_tab <- read_delim("Desafio/desafio/Desafio em R/entregas_tab.txt", 
                            "|", escape_double = FALSE, col_names = FALSE, 
                            trim_ws = TRUE, skip = 7)
 #excluindo colunas com NA
@@ -12,7 +12,7 @@ colnames (entregas) <- c("SKU", "Data de Compra", "Data de Chegada", "SKTD" )
 View(entregas)
 
 #lendo banco de dados da  descrição dos produtos
-prods_tab <- read.csv("~/Desafio/prods_tab.csv")
+prods_tab <- read.csv("~/Desafio/desafio/Desafio em R/prods_tab.csv")
 
 #excluindo linhas em brancos
 prods <- prods_tab[-c(1,5,6,8:10,16),]
